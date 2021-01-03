@@ -1,0 +1,113 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px; }
+
+* {
+  box-sizing: border-box; }
+
+a {
+  font-family: 'Inconsolata', sans-serif;
+  color: #222222;
+  text-decoration: none;
+  transition: 0.2s; }
+
+.link__mailto {
+  font-weight: 600;
+  text-decoration: underline; }
+  .link__mailto:hover {
+    color: #4777fb; }
+
+button {
+  font-family: 'Inconsolata', sans-serif;
+  border-radius: 28px;
+  padding: 17px 32px;
+  transition: 0.2s; }
+
+.button__colored {
+  font-weight: 700;
+  background-color: #4777fb;
+  color: white;
+  border: none; }
+
+.button__transparent {
+  font-weight: 600;
+  color: #272d3d;
+  background-color: transparent;
+  border: 1px solid #b1b2b8; }
+
+.description {
+  line-height: 1.5em;
+  color: #676c7a; }
+
+.section_caption {
+  font-family: 'Inconsolata', sans-serif;
+  font-weight: 600;
+  color: #4777fb; }
+
+.section_title {
+  line-height: 1.3em;
+  font-weight: 700;
+  font-size: 40px;
+  color: #272d3d; }
+
+.flex {
+  display: flex; }
+
+.flex_column {
+  display: flex;
+  flex-direction: column; }
+
+.home_page_wrapper {
+  position: relative;
+  padding: 65px;
+  background: url("../uploads/images/Background.png") no-repeat center;
+  background-size: cover;
+  min-height: 900px; }
+  .home_page_wrapper .link__mailto {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 190px;
+    top: 52px;
+    right: 43px; }
+  .home_page_wrapper .home_page_nav {
+    width: 100px; }
+    .home_page_wrapper .home_page_nav img {
+      margin-bottom: 30px; }
+    .home_page_wrapper .home_page_nav .home_page_nav_list li {
+      height: 30px; }
+    .home_page_wrapper .home_page_nav .home_page_nav_list a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      font-size: 14px;
+      font-family: 'Inconsolata', sans-serif;
+      font-weight: 400;
+      color: #9699a3; }
+      .home_page_wrapper .home_page_nav .home_page_nav_list a:hover {
+        color: #272d3d; }
+  .home_page_wrapper .home_page_inner {
+    margin: 100px auto 0 auto;
+    min-height: 455px; }
+    .home_page_wrapper .home_page_inner .about_us {
+      display: inline-block;
+      vertical-align: bottom;
+      margin-bottom: 35px;
+      width: 550px; }
+      .home_page_wrapper .home_page_inner .about_us .section_caption {
+        margin-bottom: 9px; }
+      .home_page_wrapper .home_page_inner .about_us .section_title {
+        margin-bottom: 16px; }
+      .home_page_wrapper .home_page_inner .about_us .description {
+        margin-bottom: 45px; }
+      .home_page_wrapper .home_page_inner .about_us .button__colored {
+        margin-right: 16px; }
+    .home_page_wrapper .home_page_inner .features {
+      margin-top: 180px; }
+      .home_page_wrapper .home_page_inner .features .description {
+        width: 300px;
+        min-height: 50px; }
+        .home_page_wrapper .home_page_inner .features .description:not(:last-child) {
+          margin-right: 48px; }
