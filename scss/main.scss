@@ -285,6 +285,7 @@ button {
   min-height: 1050px;
 
   .cases_inner {
+    overflow: hidden;
     width: 1100px;
 
     .section_caption {
@@ -357,78 +358,82 @@ button {
       }
     }
 
-    .offer_specification {
-      margin-bottom: 48px;
+    .slider_container {
+      transition: 0.3s;
+      .offer_specification {
+        margin-bottom: 48px;
 
-      img {
-        margin-right: 50px;
-      }
-
-      .offer_description_title {
-        font-weight: 500;
-        color: rgba(39, 45, 61, 1);
-        margin-bottom: 8px;
-      }
-
-      .description:not(:last-child) {
-        margin-bottom: 24px;
-      }
-    }
-
-    .offer_result {
-      justify-content: space-between;
-      height: 300px;
-
-      .offer_result_description {
-        width: 700px;
-        background-color: rgba(247, 248, 249, 1);
-        padding: 32px;
-        margin-right: 30px;
+        img {
+          margin-right: 50px;
+        }
 
         .offer_description_title {
-          margin-bottom: 12px;
-          font-weight: 700;
-          font-size: 18px;
+          font-weight: 500;
+          color: rgba(39, 45, 61, 1);
+          margin-bottom: 8px;
         }
 
-        p.description {
-          margin-bottom: 20px;
+        .description:not(:last-child) {
+          margin-bottom: 24px;
         }
+      }
 
-        ul {
-          li {
-            &:not(:last-child) {
-              margin-bottom: 8px;
-            }
+      .offer_result {
+        justify-content: space-between;
+        height:fit-content;
 
-            &:before {
-              display: inline-block;
-              content: "";
-              width: 6px;
-              height: 6px;
-              border-radius: 50%;
-              margin-bottom: 2px;
-              margin-right: 8px;
-              background-color: rgba(39, 45, 61, 1);
+        .offer_result_description {
+          width: 700px;
+          background-color: rgba(247, 248, 249, 1);
+          padding: 32px;
+          margin-right: 30px;
+
+          .offer_description_title {
+            margin-bottom: 12px;
+            font-weight: 700;
+            font-size: 18px;
+          }
+
+          p.description {
+            margin-bottom: 20px;
+          }
+
+          ul {
+            li {
+              &:not(:last-child) {
+                margin-bottom: 8px;
+              }
+
+              &:before {
+                display: inline-block;
+                content: "";
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                margin-bottom: 2px;
+                margin-right: 8px;
+                background-color: rgba(39, 45, 61, 1);
+              }
             }
           }
         }
       }
-    }
 
-    .offer_discus {
-      .offer_discus_title{
-        font-size: 25px;
-      }
-      width: 340px;
-      justify-content: space-between;
-      padding: 32px;
-      height: 100%;
-      color: rgba(255, 255, 255, 1);
-      background-color: rgba(39, 45, 61, 1);
+      .offer_discus {
+        .offer_discus_title {
+          font-size: 25px;
+        }
 
-      .button__transparent {
+        width: 370px;
+        justify-content: space-between;
+        padding: 32px;
+        height: content-box;
         color: rgba(255, 255, 255, 1);
+        background-color: rgba(39, 45, 61, 1);
+
+        .button__transparent {
+          color: rgba(255, 255, 255, 1);
+        }
       }
     }
   }
