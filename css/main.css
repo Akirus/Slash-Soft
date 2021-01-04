@@ -58,6 +58,7 @@ button {
   flex-direction: column; }
 
 .home_page_wrapper {
+  border-bottom: 1px solid #dcdde0;
   position: relative;
   padding: 65px;
   background: url("../uploads/images/Background.png") no-repeat center;
@@ -111,3 +112,176 @@ button {
         min-height: 50px; }
         .home_page_wrapper .home_page_inner .features .description:not(:last-child) {
           margin-right: 48px; }
+
+.services_wrapper {
+  justify-content: center;
+  padding: 190px 65px 190px 165px;
+  min-height: 1200px; }
+  .services_wrapper .services_inner {
+    width: 1100px; }
+    .services_wrapper .services_inner .section_caption {
+      margin-bottom: 9px; }
+    .services_wrapper .services_inner .section_title {
+      font-size: 32px;
+      margin-bottom: 95px; }
+  .services_wrapper .capabilities {
+    border: 1px solid #dcdde0; }
+    .services_wrapper .capabilities .capability {
+      padding: 10px 50px;
+      align-items: center;
+      min-height: 340px; }
+      .services_wrapper .capabilities .capability:not(:last-child) {
+        border-bottom: 1px solid #dcdde0; }
+      .services_wrapper .capabilities .capability span {
+        margin-right: 30px;
+        font-size: 24px; }
+      .services_wrapper .capabilities .capability img {
+        margin-right: 40px; }
+      .services_wrapper .capabilities .capability .capability_title {
+        font-weight: 700;
+        font-size: 24px;
+        color: #272d3d;
+        margin-bottom: 16px; }
+      .services_wrapper .capabilities .capability ul li:not(:last-child) {
+        margin-bottom: 12px; }
+      .services_wrapper .capabilities .capability ul li:before {
+        display: inline-block;
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        margin-bottom: 2px;
+        margin-right: 8px;
+        background-color: #272d3d; }
+
+#about_us {
+  background-color: #f7f8f9; }
+
+.about_us_wrapper {
+  justify-content: center;
+  padding: 128px 65px 128px 165px;
+  min-height: 961px; }
+  .about_us_wrapper .about_us_container {
+    margin-right: 120px;
+    width: 350px; }
+    .about_us_wrapper .about_us_container .section_caption {
+      margin-bottom: 8px; }
+    .about_us_wrapper .about_us_container .section_title {
+      font-size: 32px;
+      margin-bottom: 20px; }
+  .about_us_wrapper .about_us_advantages {
+    width: 630px; }
+    .about_us_wrapper .about_us_advantages .about_us_advantage .advantage_title {
+      font-weight: 700;
+      font-size: 18px;
+      color: #272d3d;
+      margin-bottom: 12px; }
+    .about_us_wrapper .about_us_advantages .about_us_advantage:not(:last-child) {
+      border-bottom: 1px solid #dcdde0; }
+      .about_us_wrapper .about_us_advantages .about_us_advantage:not(:last-child) .description {
+        margin-bottom: 32px; }
+    .about_us_wrapper .about_us_advantages .about_us_advantage:not(:first-child) {
+      margin-top: 32px; }
+
+.cases_wrapper {
+  justify-content: center;
+  padding: 128px 65px 128px 165px;
+  min-height: 1050px; }
+  .cases_wrapper .cases_inner {
+    width: 1100px; }
+    .cases_wrapper .cases_inner .section_caption {
+      margin-bottom: 8px; }
+    .cases_wrapper .cases_inner .section_title {
+      font-size: 32px; }
+    .cases_wrapper .cases_inner .cases_container {
+      width: 500px;
+      margin-bottom: 80px; }
+    .cases_wrapper .cases_inner .solution_offer {
+      width: 100%;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #dcdde0;
+      margin-bottom: 45px; }
+      .cases_wrapper .cases_inner .solution_offer .solution_title {
+        align-self: flex-end;
+        font-size: 28px;
+        color: #272d3d; }
+      .cases_wrapper .cases_inner .solution_offer button {
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 1px solid #b1b2b8; }
+      .cases_wrapper .cases_inner .solution_offer .button__back {
+        position: relative;
+        margin-right: 16px; }
+        .cases_wrapper .cases_inner .solution_offer .button__back::after {
+          top: 19px;
+          left: 20px;
+          position: absolute;
+          content: "";
+          width: 10px;
+          height: 10px;
+          transform: rotate(135deg);
+          border-bottom: 1px solid #272d3d;
+          border-right: 1px solid #272d3d; }
+      .cases_wrapper .cases_inner .solution_offer .button__next {
+        position: relative;
+        margin-right: 16px; }
+        .cases_wrapper .cases_inner .solution_offer .button__next::after {
+          top: 19px;
+          left: 16px;
+          position: absolute;
+          content: "";
+          width: 10px;
+          height: 10px;
+          transform: rotate(-45deg);
+          border-bottom: 1px solid #272d3d;
+          border-right: 1px solid #272d3d; }
+    .cases_wrapper .cases_inner .offer_specification {
+      margin-bottom: 48px; }
+      .cases_wrapper .cases_inner .offer_specification img {
+        margin-right: 50px; }
+      .cases_wrapper .cases_inner .offer_specification .offer_description_title {
+        font-weight: 500;
+        color: #272d3d;
+        margin-bottom: 8px; }
+      .cases_wrapper .cases_inner .offer_specification .description:not(:last-child) {
+        margin-bottom: 24px; }
+    .cases_wrapper .cases_inner .offer_result {
+      justify-content: space-between;
+      height: 300px; }
+      .cases_wrapper .cases_inner .offer_result .offer_result_description {
+        width: 700px;
+        background-color: #f7f8f9;
+        padding: 32px;
+        margin-right: 30px; }
+        .cases_wrapper .cases_inner .offer_result .offer_result_description .offer_description_title {
+          margin-bottom: 12px;
+          font-weight: 700;
+          font-size: 18px; }
+        .cases_wrapper .cases_inner .offer_result .offer_result_description p.description {
+          margin-bottom: 20px; }
+        .cases_wrapper .cases_inner .offer_result .offer_result_description ul li:not(:last-child) {
+          margin-bottom: 8px; }
+        .cases_wrapper .cases_inner .offer_result .offer_result_description ul li:before {
+          display: inline-block;
+          content: "";
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          margin-bottom: 2px;
+          margin-right: 8px;
+          background-color: #272d3d; }
+    .cases_wrapper .cases_inner .offer_discus {
+      width: 340px;
+      justify-content: space-between;
+      padding: 32px;
+      height: 100%;
+      color: white;
+      background-color: #272d3d; }
+      .cases_wrapper .cases_inner .offer_discus .offer_discus_title {
+        font-size: 25px; }
+      .cases_wrapper .cases_inner .offer_discus .button__transparent {
+        color: white; }
