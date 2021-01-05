@@ -607,10 +607,10 @@ button {
       width: 1100px;
       transition: 0.3s;
       .technology_slide{
-        min-width:1100px;
+        min-width:1101px;
         display: grid;
         grid-template-columns:repeat(auto-fit, 158px);
-        grid-column-gap: 127px;
+        grid-column-gap: 128px;
       }
     }
   }
