@@ -439,3 +439,182 @@ button {
   }
 }
 
+.workflow_wrapper{
+  min-height:1000px;
+  padding:128px 65px 128px 165px;
+  justify-content: center;
+  .workflow_inner{
+    width: 1100px;
+    .workflow_container{
+      margin-bottom: 60px;
+      .section_caption{
+        margin-bottom: 8px;
+      }
+      .section_title{
+        font-size:32px;
+      }
+    }
+    .workflow_stages{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 442px 65px 1fr;
+      grid-column-gap:75px;
+      grid-row-gap:95px;
+      .stage_cycle{
+        align-items: center;
+        grid-column: 2/3;
+        grid-row: 1/4;
+        .stage_circle{
+          width: 65px;
+          height: 65px;
+          border-radius: 50%;
+          justify-content: center;
+          align-items: center;
+          border:1px solid rgba(220, 221, 224, 1) ;
+          .stage_number{
+            font-size: 24px;
+            color: rgba(39, 45, 61, 1);
+          }
+        }
+        .stage_line{
+          width: 2px;
+          height: 335px;
+          border:1px solid rgba(220, 221, 224, 1);
+        }
+      }
+      .stage_description{
+        .stage_description_title{
+          font-size:24px;
+          font-weight: 700;
+          margin-bottom:16px;
+        }
+        ul {
+          li {
+            &:not(:last-child) {
+              margin-bottom: 12px;
+            }
+
+            &:before {
+              display: inline-block;
+              content: "";
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              margin-bottom: 2px;
+              margin-right: 8px;
+              background-color: rgba(39, 45, 61, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#our_team{
+  background-color:rgba(247, 248, 249, 1);
+}
+
+.our_team_wrapper{
+  justify-content: center;
+  padding:128px 65px 128px 165px;
+  min-height: 1000px;
+  .our_team_inner{
+    width: 1100px;
+    .our_team_title_container{
+      margin-bottom: 95px;
+      .section_caption{
+        margin-bottom: 8px;
+      }
+      .section_title{
+        font-size:32px;
+      }
+    }
+    .our_team_container{
+      display: grid;
+      grid-column-gap:125px;
+      grid-row-gap:105px;
+      grid-template-columns: repeat(auto-fit, 252px);
+
+      .developer{
+        width: 252px;
+        img{
+          margin-bottom:20px;
+        }
+        .developers_name{
+          margin-bottom: 8px;
+          font-size: 18px;
+          font-weight: 700;
+        }
+        .developers_position{
+          margin-bottom: 12px;
+          font-size: 14px;
+          color:rgba(150, 153, 163, 1);
+        }
+      }
+    }
+  }
+}
+
+.technology_wrapper{
+  padding:128px 65px 128px 165px;
+  min-height: 1000px;
+  justify-content: center;
+  .technology_inner{
+    width: 1100px;
+    overflow: hidden;
+    .technology_title_container{
+      .section_caption{
+        margin-bottom: 8px;
+      }
+      .section_title{
+        font-size: 32px;
+        margin-bottom:95px;
+      }
+    }
+    .technology_options{
+      margin-bottom:65px;
+      align-items: center;
+      height: 30px;
+      border-bottom:1px solid rgba(220, 221, 224, 1);
+      button{
+        position: relative;
+        margin-bottom: 15px;
+        height:100%;
+        font-family: 'DM Sans', sans-serif;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        font-size: 18px;
+        color:#9699A3;
+        &:not(:last-child){
+          margin-right:45px;
+        }
+        &.underline{
+          color:#272D3D;
+          &::after{
+            position: absolute;
+            content:"";
+            border:1px solid rgba(39, 45, 61, 1);
+            bottom:-7px;
+            left:0;
+            right:0;
+          }
+        }
+      }
+    }
+    .technology_slider_container{
+      width: 1100px;
+      transition: 0.3s;
+      .technology_slide{
+        min-width:1100px;
+        display: grid;
+        grid-template-columns:repeat(auto-fit, 158px);
+        grid-column-gap: 127px;
+      }
+    }
+  }
+}
+
+
+

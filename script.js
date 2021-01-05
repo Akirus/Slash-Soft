@@ -14,7 +14,7 @@ buttonBack.setAttribute("disabled", "disabled");
 
 buttonNext.addEventListener("click", () => {
     solutionTitleCurrentValue++;
-    if(buttonBack.hasAttribute("disabled")){
+    if (buttonBack.hasAttribute("disabled")) {
         buttonBack.removeAttribute("disabled")
     }
     solutionTitle.textContent = solutionTitleValues[solutionTitleCurrentValue % 3]
@@ -25,7 +25,7 @@ buttonNext.addEventListener("click", () => {
 })
 
 buttonBack.addEventListener("click", () => {
-    if(buttonNext.hasAttribute("disabled")){
+    if (buttonNext.hasAttribute("disabled")) {
         buttonNext.removeAttribute("disabled")
     }
     solutionTitleCurrentValue--;
@@ -34,7 +34,54 @@ buttonBack.addEventListener("click", () => {
         buttonBack.setAttribute("disabled", "disabled")
         slider.style.transform = `translateX(0)`
     } else {
-        slider.style.transform=`translateX(-${translateValue * solutionTitleCurrentValue}px)`
+        slider.style.transform = `translateX(-${translateValue * solutionTitleCurrentValue}px)`
     }
 })
+
+const buttonPlatforms = document.querySelector(".button__platforms");
+const buttonLanguages = document.querySelector(".button__languages");
+const buttonOther = document.querySelector(".button__other");
+const technologySliderContainer = document.querySelector(".technology_slider_container");
+
+let clicks = 0;
+
+buttonLanguages.addEventListener("click", () => {
+    technologySliderContainer.style.transform = `translateX(-${translateValue}px)`
+    if(!buttonLanguages.classList.contains("underline")){
+        buttonLanguages.classList.add("underline");
+    }
+    if(buttonPlatforms.classList.contains("underline")){
+        buttonPlatforms.classList.remove("underline");
+    }
+    if(buttonOther.classList.contains("underline")){
+        buttonOther.classList.remove("underline");
+    }
+})
+
+buttonPlatforms.addEventListener("click", () => {
+    technologySliderContainer.style.transform = `translateX(0)`;
+    if(!buttonPlatforms.classList.contains("underline")){
+        buttonPlatforms.classList.add("underline");
+    }
+    if(buttonLanguages.classList.contains("underline")){
+        buttonLanguages.classList.remove("underline");
+    }
+    if(buttonOther.classList.contains("underline")){
+        buttonOther.classList.remove("underline");
+    }
+})
+
+buttonOther.addEventListener("click", () =>{
+    technologySliderContainer.style.transform = `translateX(-${translateValue*2}px)`;
+    if(!buttonOther.classList.contains("underline")){
+        buttonOther.classList.add("underline");
+    }
+    if(buttonPlatforms.classList.contains("underline")){
+        buttonPlatforms.classList.remove("underline");
+    }
+    if(buttonLanguages.classList.contains("underline")){
+        buttonLanguages.classList.remove("underline");
+    }
+})
+
 
