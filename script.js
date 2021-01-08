@@ -44,9 +44,16 @@ const buttonOther = document.querySelector(".button__other");
 const technologySliderContainer = document.querySelector(".technology_slider_container");
 
 let clicks = 0;
+const buttons =[buttonPlatforms,buttonLanguages,buttonOther];
+
 
 buttonLanguages.addEventListener("click", () => {
     technologySliderContainer.style.transform = `translateX(-${translateValue}px)`
+    buttons.forEach((button)=>{
+        if(!buttonLanguages.classList.contains("underline")){
+            buttonLanguages.classList.add("underline");
+        }
+    })
     if(!buttonLanguages.classList.contains("underline")){
         buttonLanguages.classList.add("underline");
     }
@@ -84,4 +91,32 @@ buttonOther.addEventListener("click", () =>{
     }
 })
 
+const faqChat=document.querySelector(".faq_chat_slider");
+const buttonQuestion=document.querySelector(".button__question");
+const answers=document.querySelectorAll(".answer");
+
+let chatTranslateValue="88";
+let buttonQuestionClicks=0;
+
+buttonQuestion.addEventListener("click",()=>{
+    faqChat.style.transform=`translateY(-88px)`;
+    let promise=new Promise(function(resolve,reject){
+        setTimeout(()=>faqChat.style.transform=`translateY(-188px)`,300);
+        resolve(setTimeout(()=>{
+            answers[1].innerHTML="<p class=\"description\">\n" +
+                "                            We provide custom solutions for e-commerce, technologies we use are:\n" +
+                "                        </p>\n" +
+                "                        <ul>\n" +
+                "                            <li><p class=\"dot description\">Taking a sprint with a bunch of tasks into work, our\n" +
+                "                                employees\n" +
+                "                                implement and test the task,\n" +
+                "                                after which we provide a demo to the customer.</p></li>\n" +
+                "                            <li><p class=\"dot description\">The client validates the work and agrees on the next set of\n" +
+                "                                tasks.</p></li>\n" +
+                "                            <li><p class=\"dot description\">Close and continuous execution of tasks brings the product as\n" +
+                "                                close as possible to the customer's vision.</p></li>\n" +
+                "                        </ul>"
+            faqChat.style.transform=`translateY(-354px)`
+    },1000))
+})})
 

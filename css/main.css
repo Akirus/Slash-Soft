@@ -35,6 +35,16 @@ button {
   background-color: transparent;
   border: 1px solid #b1b2b8; }
 
+.dot:before {
+  display: inline-block;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-bottom: 2px;
+  margin-right: 8px;
+  background-color: #272d3d; }
+
 .description {
   line-height: 1.5em;
   color: #676c7a; }
@@ -60,7 +70,7 @@ button {
 .home_page_wrapper {
   border-bottom: 1px solid #dcdde0;
   position: relative;
-  padding: 65px;
+  padding: 65px 65px 65px 165px;
   background: url("../uploads/images/Background.png") no-repeat center;
   background-size: cover;
   min-height: 900px; }
@@ -74,6 +84,10 @@ button {
     top: 52px;
     right: 43px; }
   .home_page_wrapper .home_page_nav {
+    z-index: 100;
+    position: fixed;
+    top: 65px;
+    left: 65px;
     width: 100px; }
     .home_page_wrapper .home_page_nav img {
       margin-bottom: 30px; }
@@ -376,7 +390,7 @@ button {
 
 .technology_wrapper {
   padding: 128px 65px 128px 165px;
-  min-height: 1000px;
+  min-height: 400px;
   justify-content: center; }
   .technology_wrapper .technology_inner {
     width: 1100px;
@@ -408,7 +422,7 @@ button {
           .technology_wrapper .technology_inner .technology_options button.underline::after {
             position: absolute;
             content: "";
-            border: 1px solid #272d3d;
+            border-bottom: 2px solid #272d3d;
             bottom: -7px;
             left: 0;
             right: 0; }
@@ -416,7 +430,178 @@ button {
       width: 1100px;
       transition: 0.3s; }
       .technology_wrapper .technology_inner .technology_slider_container .technology_slide {
-        min-width: 1101px;
+        min-width: 1100px;
         display: grid;
         grid-template-columns: repeat(auto-fit, 158px);
         grid-column-gap: 128px; }
+
+.faq_wrapper {
+  justify-content: center;
+  padding: 0 65px 128px 165px; }
+  .faq_wrapper .faq_inner {
+    width: 1100px; }
+    .faq_wrapper .faq_inner .faq_title_container .section_caption {
+      margin-bottom: 8px; }
+    .faq_wrapper .faq_inner .faq_title_container .section_title {
+      font-size: 32px;
+      margin-bottom: 95px; }
+    .faq_wrapper .faq_inner .faq_chat {
+      overflow: hidden;
+      width: 100%;
+      height: 354px; }
+      .faq_wrapper .faq_inner .faq_chat .faq_chat_slider {
+        transition: 0.3s; }
+      .faq_wrapper .faq_inner .faq_chat .question {
+        border-bottom-left-radius: 28px;
+        border-top-left-radius: 28px;
+        border-top-right-radius: 28px;
+        align-self: flex-end;
+        margin-bottom: 24px;
+        color: #FFFFFF;
+        width: 630px;
+        padding: 24px 32px;
+        background-color: #4777FB; }
+      .faq_wrapper .faq_inner .faq_chat .answer {
+        margin-bottom: 24px;
+        border-bottom-right-radius: 28px;
+        border-top-left-radius: 28px;
+        border-top-right-radius: 28px;
+        width: 630px;
+        padding: 24px 32px;
+        border: 1px solid #dcdde0; }
+        .faq_wrapper .faq_inner .faq_chat .answer p:first-child {
+          margin-bottom: 12px; }
+    .faq_wrapper .faq_inner .faq_buttons_container {
+      width: 100%;
+      height: 120px;
+      align-items: center;
+      justify-content: flex-end;
+      background-color: #f7f8f9;
+      border-top: 1px solid #b1b2b8; }
+      .faq_wrapper .faq_inner .faq_buttons_container .button__colored {
+        margin-right: 15px; }
+      .faq_wrapper .faq_inner .faq_buttons_container .button__transparent {
+        margin-right: 30px; }
+
+.contact_us_wrapper {
+  padding: 70px 65px 128px 165px;
+  min-height: 500px;
+  justify-content: center; }
+  .contact_us_wrapper .contact_us_inner {
+    width: 1100px; }
+    .contact_us_wrapper .contact_us_inner .contact_us_title_container {
+      width: 800px;
+      margin-bottom: 95px; }
+      .contact_us_wrapper .contact_us_inner .contact_us_title_container div {
+        margin-right: 200px;
+        width: 370px; }
+        .contact_us_wrapper .contact_us_inner .contact_us_title_container div .section_title {
+          font-size: 32px; }
+        .contact_us_wrapper .contact_us_inner .contact_us_title_container div .section_caption {
+          margin-bottom: 8px; }
+      .contact_us_wrapper .contact_us_inner .contact_us_title_container .description {
+        width: 250px;
+        align-self: flex-end; }
+    .contact_us_wrapper .contact_us_inner .contacts_form .form_title {
+      margin-bottom: 32px;
+      font-size: 24px; }
+      .contact_us_wrapper .contact_us_inner .contacts_form .form_title span {
+        margin-right: 16px; }
+    .contact_us_wrapper .contact_us_inner .contacts_form .subject_container {
+      margin-right: 120px; }
+    .contact_us_wrapper .contact_us_inner .contacts_form .subject {
+      display: grid;
+      width: 436px;
+      grid-template-columns: repeat(auto-fit, 210px);
+      grid-gap: 16px; }
+      .contact_us_wrapper .contact_us_inner .contacts_form .subject input {
+        display: none; }
+      .contact_us_wrapper .contact_us_inner .contacts_form .subject label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        padding: 24px;
+        align-items: center;
+        width: 210px;
+        height: 210px;
+        border: 1px solid #dcdde0; }
+        .contact_us_wrapper .contact_us_inner .contacts_form .subject label img {
+          margin-bottom: 10px; }
+        .contact_us_wrapper .contact_us_inner .contacts_form .subject label .description {
+          text-align: center; }
+    .contact_us_wrapper .contact_us_inner .contacts_form .user_information {
+      width: 544px; }
+      .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type input, .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type textarea {
+        border: 1px solid #dcdde0;
+        padding: 0 16px;
+        width: 544px; }
+      .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type input[type="text"] {
+        margin-bottom: 16px;
+        padding: 0 16px;
+        height: 48px; }
+      .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type textarea {
+        font-family: 'DM Sans', sans-serif;
+        padding-top: 12px;
+        resize: none;
+        height: 190px;
+        vertical-align: top;
+        margin-bottom: 24px; }
+      .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:nth-child(2) {
+        align-items: center;
+        justify-content: space-between; }
+        .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:nth-child(2) div {
+          width: 300px; }
+          .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:nth-child(2) div input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px; }
+          .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:nth-child(2) div label {
+            margin-right: 10px; }
+
+#footer_menu {
+  background-color: #272d3d; }
+
+.footer_menu_wrapper {
+  border-bottom: 1px solid #676c7a;
+  justify-content: center;
+  padding: 40px 65px 40px 165px;
+  min-height: 150px; }
+  .footer_menu_wrapper .footer_menu_inner {
+    justify-content: space-between;
+    width: 1100px;
+    font-size: 14px; }
+    .footer_menu_wrapper .footer_menu_inner .logo_container {
+      margin-right: 15px;
+      width: 150px; }
+      .footer_menu_wrapper .footer_menu_inner .logo_container img {
+        margin-bottom: 8px; }
+    .footer_menu_wrapper .footer_menu_inner .social_container a:not(:last-child) {
+      margin-right: 12px; }
+    .footer_menu_wrapper .footer_menu_inner .social_container a img {
+      width: 24px;
+      height: 24px; }
+    .footer_menu_wrapper .footer_menu_inner .footer_nav_list {
+      margin-right: 15px; }
+      .footer_menu_wrapper .footer_menu_inner .footer_nav_list li {
+        height: 40px; }
+        .footer_menu_wrapper .footer_menu_inner .footer_nav_list li:not(:last-child) {
+          margin-right: 32px; }
+        .footer_menu_wrapper .footer_menu_inner .footer_nav_list li a {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          color: white; }
+
+.footer_info {
+  min-height: 70px;
+  align-items: center;
+  justify-content: center; }
+  .footer_info a {
+    display: flex;
+    align-items: center;
+    height: 40px; }
+    .footer_info a:not(:first-child) {
+      text-decoration: underline; }
+    .footer_info a:not(:last-child) {
+      margin-right: 24px; }
