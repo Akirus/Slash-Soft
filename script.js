@@ -10,6 +10,14 @@ let solutionTitleValues = ["Food Delivery", "Women's Clothing Webstore", "Furnit
 let solutionTitleCurrentValue = 0;
 let translateValue = "1100";
 
+
+if(document.documentElement.clientWidth<1348 && document.documentElement.clientWidth>700){
+    translateValue="640";
+}
+if(document.documentElement.clientWidth<700){
+    translateValue="311";
+}
+
 buttonBack.setAttribute("disabled", "disabled");
 
 buttonNext.addEventListener("click", () => {
@@ -119,4 +127,18 @@ buttonQuestion.addEventListener("click",()=>{
             faqChat.style.transform=`translateY(-354px)`
     },1000))
 })})
+
+/*const wrappers=document.querySelectorAll('[class*="_wrapper"]');
+const inners=document.querySelectorAll('[class*="_inner"]');
+const width=screen.width;
+
+if(width < 1366){
+    for(let i of wrappers){
+        i.style.padding="65px";
+    }
+    /!*for(let i of inners){
+        i.style.setProperty("width",640+"px");
+    }*!/
+}*/
+
 

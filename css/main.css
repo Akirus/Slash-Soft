@@ -1,3 +1,7 @@
+:root {
+  --wrapper_padding: 65px 65px 65px 165px;
+  --inner_width: 1100px; }
+
 body {
   font-family: 'DM Sans', sans-serif;
   font-size: 16px; }
@@ -70,10 +74,10 @@ button {
 .home_page_wrapper {
   border-bottom: 1px solid #dcdde0;
   position: relative;
-  padding: 65px 65px 65px 165px;
+  padding: var(--wrapper_padding);
   background: url("../uploads/images/Background.png") no-repeat center;
   background-size: cover;
-  min-height: 900px; }
+  min-height: 300px; }
   .home_page_wrapper .link__mailto {
     position: absolute;
     display: flex;
@@ -104,8 +108,7 @@ button {
       .home_page_wrapper .home_page_nav .home_page_nav_list a:hover {
         color: #272d3d; }
   .home_page_wrapper .home_page_inner {
-    margin: 100px auto 0 auto;
-    min-height: 455px; }
+    margin: 100px auto 0 auto; }
     .home_page_wrapper .home_page_inner .about_us {
       display: inline-block;
       vertical-align: bottom;
@@ -120,7 +123,7 @@ button {
       .home_page_wrapper .home_page_inner .about_us .button__colored {
         margin-right: 16px; }
     .home_page_wrapper .home_page_inner .features {
-      margin-top: 180px; }
+      margin-top: 120px; }
       .home_page_wrapper .home_page_inner .features .description {
         width: 300px;
         min-height: 50px; }
@@ -129,10 +132,10 @@ button {
 
 .services_wrapper {
   justify-content: center;
-  padding: 190px 65px 190px 165px;
+  padding: var(--wrapper_padding);
   min-height: 1200px; }
   .services_wrapper .services_inner {
-    width: 1100px; }
+    width: var(--inner_width); }
     .services_wrapper .services_inner .section_caption {
       margin-bottom: 9px; }
     .services_wrapper .services_inner .section_title {
@@ -173,8 +176,8 @@ button {
 
 .about_us_wrapper {
   justify-content: center;
-  padding: 128px 65px 128px 165px;
-  min-height: 961px; }
+  padding: var(--wrapper_padding);
+  min-height: 600px; }
   .about_us_wrapper .about_us_container {
     margin-right: 120px;
     width: 350px; }
@@ -183,6 +186,10 @@ button {
     .about_us_wrapper .about_us_container .section_title {
       font-size: 32px;
       margin-bottom: 20px; }
+    .about_us_wrapper .about_us_container .description {
+      color: #272d3d;
+      font-size: 18px;
+      font-weight: 500; }
   .about_us_wrapper .about_us_advantages {
     width: 630px; }
     .about_us_wrapper .about_us_advantages .about_us_advantage .advantage_title {
@@ -199,11 +206,11 @@ button {
 
 .cases_wrapper {
   justify-content: center;
-  padding: 128px 65px 128px 165px;
-  min-height: 1050px; }
+  padding: var(--wrapper_padding);
+  min-height: 300px; }
   .cases_wrapper .cases_inner {
     overflow: hidden;
-    width: 1100px; }
+    width: var(--inner_width); }
     .cases_wrapper .cases_inner .section_caption {
       margin-bottom: 8px; }
     .cases_wrapper .cases_inner .section_title {
@@ -218,6 +225,7 @@ button {
       border-bottom: 1px solid #dcdde0;
       margin-bottom: 45px; }
       .cases_wrapper .cases_inner .solution_offer .solution_title {
+        font-weight: 500;
         align-self: flex-end;
         font-size: 28px;
         color: #272d3d; }
@@ -304,11 +312,11 @@ button {
           color: white; }
 
 .workflow_wrapper {
-  min-height: 1000px;
-  padding: 128px 65px 128px 165px;
+  min-height: 500px;
+  padding: var(--wrapper_padding);
   justify-content: center; }
   .workflow_wrapper .workflow_inner {
-    width: 1100px; }
+    width: var(--inner_width); }
     .workflow_wrapper .workflow_inner .workflow_container {
       margin-bottom: 60px; }
       .workflow_wrapper .workflow_inner .workflow_container .section_caption {
@@ -360,10 +368,10 @@ button {
 
 .our_team_wrapper {
   justify-content: center;
-  padding: 128px 65px 128px 165px;
+  padding: var(--wrapper_padding);
   min-height: 1000px; }
   .our_team_wrapper .our_team_inner {
-    width: 1100px; }
+    width: var(--inner_width); }
     .our_team_wrapper .our_team_inner .our_team_title_container {
       margin-bottom: 95px; }
       .our_team_wrapper .our_team_inner .our_team_title_container .section_caption {
@@ -389,11 +397,11 @@ button {
           color: #9699a3; }
 
 .technology_wrapper {
-  padding: 128px 65px 128px 165px;
+  padding: var(--wrapper_padding);
   min-height: 400px;
   justify-content: center; }
   .technology_wrapper .technology_inner {
-    width: 1100px;
+    width: var(--inner_width);
     overflow: hidden; }
     .technology_wrapper .technology_inner .technology_title_container .section_caption {
       margin-bottom: 8px; }
@@ -427,19 +435,19 @@ button {
             left: 0;
             right: 0; }
     .technology_wrapper .technology_inner .technology_slider_container {
-      width: 1100px;
+      width: 100%;
       transition: 0.3s; }
       .technology_wrapper .technology_inner .technology_slider_container .technology_slide {
-        min-width: 1100px;
+        min-width: 100%;
         display: grid;
         grid-template-columns: repeat(auto-fit, 158px);
         grid-column-gap: 128px; }
 
 .faq_wrapper {
   justify-content: center;
-  padding: 0 65px 128px 165px; }
+  padding: var(--wrapper_padding); }
   .faq_wrapper .faq_inner {
-    width: 1100px; }
+    width: var(--inner_width); }
     .faq_wrapper .faq_inner .faq_title_container .section_caption {
       margin-bottom: 8px; }
     .faq_wrapper .faq_inner .faq_title_container .section_title {
@@ -484,11 +492,11 @@ button {
         margin-right: 30px; }
 
 .contact_us_wrapper {
-  padding: 70px 65px 128px 165px;
+  padding: var(--wrapper_padding);
   min-height: 500px;
   justify-content: center; }
   .contact_us_wrapper .contact_us_inner {
-    width: 1100px; }
+    width: var(--inner_width); }
     .contact_us_wrapper .contact_us_inner .contact_us_title_container {
       width: 800px;
       margin-bottom: 95px; }
@@ -565,7 +573,7 @@ button {
 .footer_menu_wrapper {
   border-bottom: 1px solid #676c7a;
   justify-content: center;
-  padding: 40px 65px 40px 165px;
+  padding: var(--wrapper_padding);
   min-height: 150px; }
   .footer_menu_wrapper .footer_menu_inner {
     justify-content: space-between;
@@ -605,3 +613,336 @@ button {
       text-decoration: underline; }
     .footer_info a:not(:last-child) {
       margin-right: 24px; }
+
+@media (max-width: 1355px) {
+  :root {
+    --wrapper_padding: 65px;
+    --inner_width: 640px; }
+  .home_page_nav {
+    display: none; }
+  .home_page_wrapper {
+    align-items: center;
+    background: none; }
+    .home_page_wrapper .link__mailto {
+      display: none; }
+    .home_page_wrapper .home_page_inner {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      margin: 0;
+      width: var(--inner_width); }
+      .home_page_wrapper .home_page_inner img {
+        margin: 0; }
+      .home_page_wrapper .home_page_inner .features {
+        display: none; }
+      .home_page_wrapper .home_page_inner .about_us {
+        margin: 0; }
+  .services_wrapper .services_inner .capabilities .capability {
+    flex-direction: column;
+    align-items: start;
+    padding: 32px; }
+    .services_wrapper .services_inner .capabilities .capability :nth-child(-n+2) {
+      margin-right: 0; }
+  .about_us_wrapper {
+    flex-direction: column;
+    align-items: center; }
+    .about_us_wrapper .about_us_container {
+      margin: 0 0 45px 0;
+      width: var(--inner_width); }
+    .about_us_wrapper .about_us_advantages {
+      width: var(--inner_width); }
+  .cases_wrapper .cases_inner .slider_container .slider .offer_specification {
+    width: var(--inner_width);
+    flex-direction: column; }
+    .cases_wrapper .cases_inner .slider_container .slider .offer_specification img {
+      margin: 0 0 45px 0; }
+  .cases_wrapper .cases_inner .slider_container .slider .offer_result {
+    flex-direction: column; }
+    .cases_wrapper .cases_inner .slider_container .slider .offer_result .offer_result_description {
+      margin: 0 0 45px 0;
+      width: var(--inner_width); }
+    .cases_wrapper .cases_inner .slider_container .slider .offer_result .offer_discus {
+      flex-direction: row;
+      width: 100%; }
+      .cases_wrapper .cases_inner .slider_container .slider .offer_result .offer_discus .offer_discus_title {
+        font-size: 20px;
+        width: 200px; }
+  .workflow_wrapper .workflow_inner {
+    position: relative; }
+    .workflow_wrapper .workflow_inner .workflow_stages {
+      padding-left: 83px;
+      width: var(--inner_width);
+      display: block; }
+      .workflow_wrapper .workflow_inner .workflow_stages .stage_cycle {
+        position: absolute;
+        left: 0;
+        top: 455px;
+        float: left;
+        margin-right: 18px; }
+        .workflow_wrapper .workflow_inner .workflow_stages .stage_cycle .stage_line {
+          height: 486px; }
+      .workflow_wrapper .workflow_inner .workflow_stages img {
+        width: 442px;
+        height: 303px; }
+        .workflow_wrapper .workflow_inner .workflow_stages img:not(:first-child) {
+          margin-top: 48px;
+          margin-bottom: 16px; }
+        .workflow_wrapper .workflow_inner .workflow_stages img:first-child {
+          margin-bottom: 48px; }
+      .workflow_wrapper .workflow_inner .workflow_stages .stage_description:last-child .dot:not(:first-child) {
+        margin-left: 83px; }
+  .technology_wrapper .technology_inner .technology_slider_container .technology_slide {
+    min-width: 640px;
+    grid-template-columns: repeat(auto-fit, 147px);
+    grid-column-gap: 16px; }
+    .technology_wrapper .technology_inner .technology_slider_container .technology_slide img {
+      width: 148px;
+      height: 82px; }
+  .contact_us_wrapper .contact_us_inner .contact_us_title_container {
+    width: 100%; }
+    .contact_us_wrapper .contact_us_inner .contact_us_title_container div {
+      width: 400px;
+      margin-right: 16px; }
+  .contact_us_wrapper .contact_us_inner .contacts_form {
+    flex-direction: column; }
+    .contact_us_wrapper .contact_us_inner .contacts_form .subject_container {
+      margin-right: 0; }
+      .contact_us_wrapper .contact_us_inner .contacts_form .subject_container .subject {
+        margin-bottom: 48px;
+        width: 100%;
+        margin-right: 0;
+        grid-template-columns: repeat(auto-fit, 148px);
+        grid-column-gap: 16px; }
+        .contact_us_wrapper .contact_us_inner .contacts_form .subject_container .subject label {
+          padding: 10px;
+          width: 148px;
+          height: 148px; }
+          .contact_us_wrapper .contact_us_inner .contacts_form .subject_container .subject label .description {
+            font-size: 14px; }
+          .contact_us_wrapper .contact_us_inner .contacts_form .subject_container .subject label img {
+            width: 50%; }
+    .contact_us_wrapper .contact_us_inner .contacts_form .user_information {
+      width: 100%; }
+      .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-child {
+        display: flex;
+        flex-wrap: wrap; }
+        .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-child .form_title {
+          width: 640px; }
+        .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-child input {
+          width: 313px; }
+          .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-child input[name="Full Name"] {
+            margin-right: 13px; }
+        .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-child textarea {
+          width: 100%; }
+  .footer_menu_wrapper .footer_menu_inner .logo_container {
+    width: 200px; }
+  .footer_menu_wrapper .footer_menu_inner .footer_nav_list {
+    flex-wrap: wrap;
+    width: 240px; }
+    .footer_menu_wrapper .footer_menu_inner .footer_nav_list li {
+      height: 30px;
+      width: 80px; } }
+
+@media (max-width: 767px) {
+  :root {
+    --inner_width: 311px;
+    --wrapper_padding: 15px; }
+  .description {
+    font-size: 14px; }
+  .section_title {
+    font-size: 24px; }
+  .home_page_wrapper .home_page_inner .about_us {
+    width: var(--inner_width); }
+    .home_page_wrapper .home_page_inner .about_us .description {
+      margin-bottom: 32px; }
+  .home_page_wrapper .home_page_inner img[alt="Main Screen"] {
+    width: 311px;
+    height: 255px; }
+  .home_page_wrapper .home_page_inner .button__transparent {
+    border-radius: 50%;
+    padding: 0;
+    width: 50px;
+    height: 50px; }
+    .home_page_wrapper .home_page_inner .button__transparent span {
+      display: none; }
+  .services_wrapper .services_inner .section_title {
+    font-size: 24px;
+    margin-bottom: 48px; }
+  .services_wrapper .services_inner .capabilities .capability {
+    padding: 20px; }
+    .services_wrapper .services_inner .capabilities .capability img {
+      width: 271px;
+      height: 177px; }
+  .about_us_wrapper .about_us_container .section_title {
+    font-size: 24px; }
+  .about_us_wrapper .about_us_container .description {
+    font-size: 16px; }
+  .about_us_wrapper .about_us_advantages {
+    width: var(--inner_width); }
+  .cases_wrapper .cases_inner .cases_container {
+    margin-bottom: 48px; }
+    .cases_wrapper .cases_inner .cases_container .section_title {
+      width: 311px;
+      font-size: 24px; }
+  .cases_wrapper .cases_inner .solution_offer .solution_title {
+    width: 180px;
+    font-size: 18px;
+    align-self: center; }
+  .cases_wrapper .cases_inner .solution_offer button:last-child {
+    margin-right: 0; }
+  .cases_wrapper .cases_inner .slider_container .slider .offer_specification img {
+    width: 311px;
+    height: 207px; }
+  .cases_wrapper .cases_inner .slider_container .slider .offer_result .offer_discus {
+    flex-direction: column; }
+    .cases_wrapper .cases_inner .slider_container .slider .offer_result .offer_discus .offer_discus_title {
+      margin-bottom: 40px; }
+  .workflow_wrapper .workflow_inner .workflow_container .section_title {
+    font-size: 24px; }
+  .workflow_wrapper .workflow_inner .workflow_stages {
+    overflow: scroll;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 311px 311px 311px;
+    grid-template-rows: 213px auto auto;
+    grid-column-gap: 15px;
+    grid-row-gap: 24px; }
+    .workflow_wrapper .workflow_inner .workflow_stages .stage_cycle {
+      position: static;
+      grid-row: 2/3;
+      grid-column: 1/-1;
+      flex-direction: row; }
+      .workflow_wrapper .workflow_inner .workflow_stages .stage_cycle .stage_circle {
+        min-width: 56px;
+        min-height: 56px; }
+      .workflow_wrapper .workflow_inner .workflow_stages .stage_cycle .stage_line {
+        width: 260px;
+        height: 1px; }
+    .workflow_wrapper .workflow_inner .workflow_stages img {
+      width: 311px;
+      height: 213px; }
+      .workflow_wrapper .workflow_inner .workflow_stages img:nth-child(-n+3) {
+        margin: 0; }
+      .workflow_wrapper .workflow_inner .workflow_stages img:not(:first-child) {
+        margin: 0; }
+    .workflow_wrapper .workflow_inner .workflow_stages .stage_description {
+      grid-row: 3/4; }
+      .workflow_wrapper .workflow_inner .workflow_stages .stage_description:last-child .dot:not(:first-child) {
+        margin-left: 0; }
+  .technology_wrapper .technology_inner .technology_title_container {
+    margin-bottom: 48px; }
+    .technology_wrapper .technology_inner .technology_title_container .section_title {
+      font-size: 24px;
+      margin-bottom: 0; }
+  .technology_wrapper .technology_inner .technology_options {
+    padding-left: 24px;
+    margin-bottom: 32px;
+    border-bottom: none;
+    height: fit-content;
+    width: 311px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start; }
+    .technology_wrapper .technology_inner .technology_options button {
+      height: 40px;
+      margin: 0; }
+      .technology_wrapper .technology_inner .technology_options button:not(:last-child) {
+        margin-right: 0; }
+      .technology_wrapper .technology_inner .technology_options button.underline::after {
+        width: 16px;
+        height: 1px;
+        top: 17px;
+        left: -24px;
+        right: unset;
+        bottom: unset; }
+  .technology_wrapper .technology_inner .technology_slider_container .technology_slide {
+    min-width: 311px;
+    grid-template-columns: repeat(auto-fit, 147px);
+    grid-gap: 16px; }
+    .technology_wrapper .technology_inner .technology_slider_container .technology_slide img {
+      width: 147px;
+      height: 82px; }
+  .our_team_wrapper .our_team_inner {
+    width: 311px; }
+    .our_team_wrapper .our_team_inner .our_team_title_container {
+      margin-bottom: 48px; }
+      .our_team_wrapper .our_team_inner .our_team_title_container .section_title {
+        font-size: 24px; }
+    .our_team_wrapper .our_team_inner .our_team_container {
+      grid-column-gap: 10px;
+      grid-row-gap: 20px;
+      grid-template-columns: repeat(auto-fit, 148px);
+      justify-content: center; }
+      .our_team_wrapper .our_team_inner .our_team_container .developer {
+        width: 148px; }
+        .our_team_wrapper .our_team_inner .our_team_container .developer img {
+          width: 148px;
+          height: 158px; }
+        .our_team_wrapper .our_team_inner .our_team_container .developer .developers_position {
+          font-size: 12px; }
+        .our_team_wrapper .our_team_inner .our_team_container .developer .description {
+          font-size: 12px; }
+  .faq_wrapper .faq_inner .faq_title_container {
+    margin-bottom: 48px; }
+    .faq_wrapper .faq_inner .faq_title_container .section_title {
+      font-size: 24px;
+      margin-bottom: 0; }
+  .faq_wrapper .faq_inner .faq_chat {
+    height: 462px; }
+    .faq_wrapper .faq_inner .faq_chat .faq_chat_slider .answer {
+      width: 100%; }
+    .faq_wrapper .faq_inner .faq_chat .faq_chat_slider .question {
+      width: 100%; }
+  .faq_wrapper .faq_inner .faq_buttons_container {
+    height: fit-content;
+    padding: 24px 16px;
+    flex-direction: column; }
+    .faq_wrapper .faq_inner .faq_buttons_container button {
+      width: 100%; }
+      .faq_wrapper .faq_inner .faq_buttons_container button.button__transparent {
+        margin: 0; }
+      .faq_wrapper .faq_inner .faq_buttons_container button.button__colored {
+        margin: 0;
+        margin-bottom: 16px; }
+  .contact_us_wrapper .contact_us_inner .contact_us_title_container {
+    margin-bottom: 48px;
+    flex-direction: column; }
+    .contact_us_wrapper .contact_us_inner .contact_us_title_container div {
+      margin-bottom: 16px;
+      width: 100%;
+      margin-right: 0; }
+      .contact_us_wrapper .contact_us_inner .contact_us_title_container div .section_title {
+        font-size: 24px; }
+    .contact_us_wrapper .contact_us_inner .contact_us_title_container .description {
+      align-self: start; }
+  .contact_us_wrapper .contact_us_inner .contacts_form .subject_container .subject {
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, 147px); }
+    .contact_us_wrapper .contact_us_inner .contacts_form .subject_container .subject label {
+      width: 147px;
+      height: 147px; }
+  .contact_us_wrapper .contact_us_inner .contacts_form .user_information {
+    width: 100%; }
+    .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-child .form_title {
+      width: 100%; }
+    .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-child input {
+      width: 100%; }
+      .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-child input[name="Full Name"] {
+        margin-right: 0; }
+  .contact_us_wrapper .contact_us_inner div.flex:last-of-type {
+    flex-direction: column;
+    align-items: center; }
+    .contact_us_wrapper .contact_us_inner div.flex:last-of-type div {
+      flex-direction: row;
+      margin-bottom: 26px; }
+    .contact_us_wrapper .contact_us_inner div.flex:last-of-type button {
+      width: 100%; }
+  .footer_menu_wrapper .footer_menu_inner {
+    flex-direction: column; }
+    .footer_menu_wrapper .footer_menu_inner .logo_container {
+      margin-bottom: 48px; }
+    .footer_menu_wrapper .footer_menu_inner .footer_nav_list {
+      margin-bottom: 48px; }
+  .footer_info {
+    flex-direction: column;
+    align-items: start;
+    padding: var(--wrapper_padding); } }
