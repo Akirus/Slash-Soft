@@ -39,19 +39,51 @@ if(document.documentElement.clientWidth<700){
 function validate() {
     let reg = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
     const address = document.querySelector("#email");
-    if(!reg.test(address.value)) {
-        alert('Введите корректный e-mail');
+    const emailContainer = document.querySelector(".email_container");
+    const name=document.querySelector("#name");
+    const nameContainer=document.querySelector(".name_container");
+    if(!name.value.trim()) {
+        nameContainer.classList.add("wrong");
+    }
+    else{
+        nameContainer.classList.remove("wrong");
+    }
+    if(!address.value){
+        if(emailContainer.classList.contains("wrong_email")){
+            emailContainer.classList.remove("wrong_email");
+        }
+        emailContainer.classList.add("wrong");
         return false;
+    }
+    else if(!reg.test(address.value)) {
+        if(emailContainer.classList.contains("wrong")){
+            emailContainer.classList.remove("wrong");
+        }
+        emailContainer.classList.add("wrong_email");
+        return false;
+    }
+    else{
+        if(emailContainer.classList.contains("wrong")){
+            emailContainer.classList.remove("wrong");
+        }
+        else if(emailContainer.classList.contains("wrong_email")){
+            emailContainer.classList.remove("wrong_email");
+        }
+        address.value="";
+        name.value=""
+        return true;
     }
 }
 
-const form=document.querySelector("#contacts_form")
+const form=document.querySelector("#contacts_form");
+
 
 form.addEventListener("submit",event=>{
     event.preventDefault()
-    validate();
+    if(!validate()){
+        event.returnValue = false;
+    }
 })
-
 
 
 BurgerButton.addEventListener("click",()=>{
@@ -69,7 +101,8 @@ BurgerButton.addEventListener("click",()=>{
         if(target.className==="backdrop"){
             BurgerButton.classList.remove("button__menu_close");
             Burger.style.transform = `translateX(${burgerTranslateValue}px)`;
-            backDrop.style.display="none"
+            backDrop.style.display="none";
+            burgerButtonClicks=0;
         }
     })
 })

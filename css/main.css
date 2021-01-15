@@ -676,6 +676,31 @@ button {
         margin-bottom: 16px;
         padding: 0 16px;
         height: 48px; }
+      .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type .wrong_email {
+        position: relative;
+        display: block; }
+        .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type .wrong_email::before {
+          font-size: 14px;
+          content: "Email address seems invalid.";
+          position: absolute;
+          display: block;
+          bottom: 1px;
+          left: 0;
+          color: #ff555d; }
+        .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type .wrong_email::after {
+          cursor: text;
+          content: "";
+          display: block;
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          top: 16px;
+          right: 16px;
+          background-image: url("../uploads/images/alert.svg"); }
+        .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type .wrong_email input {
+          border-color: #ff555d; }
+          .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type .wrong_email input:focus {
+            border-color: #ff555d; }
       .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type .wrong {
         position: relative;
         display: block; }

@@ -1017,6 +1017,39 @@ button {
             padding: 0 16px;
             height: 48px;
           }
+          .wrong_email{
+            position: relative;
+            display: block;
+
+            &::before {
+              font-size: 14px;
+              content: "Email address seems invalid.";
+              position: absolute;
+              display: block;
+              bottom: 1px;
+              left: 0;
+              color: rgba(255, 85, 93, 1);
+            }
+
+            &::after {
+              cursor: text;
+              content: "";
+              display: block;
+              position: absolute;
+              width: 16px;
+              height: 16px;
+              top: 16px;
+              right: 16px;
+              background-image: url("../uploads/images/alert.svg");
+            }
+            input {
+              border-color: rgba(255, 85, 93, 1);
+
+              &:focus {
+                border-color: rgba(255, 85, 93, 1);
+              }
+            }
+          }
 
           .wrong{
             position: relative;
@@ -1040,6 +1073,7 @@ button {
               top:16px;
               right:16px;
               background-image: url("../uploads/images/alert.svg");
+
             }
             input {
               border-color: rgba(255, 85, 93, 1);
