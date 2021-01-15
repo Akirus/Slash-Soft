@@ -67,10 +67,9 @@ BurgerButton.addEventListener("click",()=>{
     document.addEventListener("click",event=>{
         let target=event.target;
         if(target.className==="backdrop"){
-            BurgerButton.classList.toggle("button__menu_close");
+            BurgerButton.classList.remove("button__menu_close");
             Burger.style.transform = `translateX(${burgerTranslateValue}px)`;
             backDrop.style.display="none"
-            burgerButtonClicks=0;
         }
     })
 })
