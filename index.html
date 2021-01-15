@@ -23,14 +23,14 @@
         <aside class="home_page_nav">
             <img src="./uploads/images/Logo.svg" alt="Slash Soft">
             <ul class="home_page_nav_list flex_column">
-                <li><a href="">SERVICES</a></li>
-                <li><a href="">ABOUT US</a></li>
-                <li><a href="">CASES</a></li>
-                <li><a href="">WORKFLOW</a></li>
-                <li><a href="">OUR TEAM</a></li>
-                <li><a href="">TECHNOLOGY</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">CONTACT US</a></li>
+                <li><a class="nav_link" href="">SERVICES</a></li>
+                <li><a class="nav_link" href="">ABOUT US</a></li>
+                <li><a class="nav_link" href="">CASES</a></li>
+                <li><a class="nav_link" href="">WORKFLOW</a></li>
+                <li><a class="nav_link" href="">OUR TEAM</a></li>
+                <li><a class="nav_link" href="">TECHNOLOGY</a></li>
+                <li><a class="nav_link" href="">FAQ</a></li>
+                <li><a class="nav_link" href="">CONTACT US</a></li>
             </ul>
         </aside>
         <div class="home_page_inner">
@@ -710,8 +710,8 @@
                 <div class="user_information">
                     <div>
                         <h2 class="form_title"><span class="numbering description">02</span>Wright more about it</h2>
-                        <input type="text" name="Full Name" placeholder="Full Name">
-                        <input type="text" name="Email" placeholder="Email">
+                        <div class="wrong"><input type="text" name="Full Name" placeholder="Full Name"></div>
+                        <input type="text" id="email" name="Email" placeholder="Email">
                         <textarea placeholder="Your Message"></textarea>
                     </div>
                     <div class="flex">
@@ -721,7 +721,7 @@
                                     class="description">I agree to terms and conditions</span>
                             </label>
                         </div>
-                        <button class="button__colored">Send Message <img src="./uploads/images/Vector.svg" alt="">
+                        <button type="submit" class="button__colored">Send Message <img src="./uploads/images/Vector.svg" alt="">
                         </button>
                     </div>
                 </div>

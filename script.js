@@ -36,6 +36,21 @@ if(document.documentElement.clientWidth<700){
     translateValue="311";
 }
 
+function validate() {
+    let reg = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+    const address = document.querySelector("#email");
+    if(!reg.test(address.value)) {
+        alert('Введите корректный e-mail');
+        return false;
+    }
+}
+
+const form=document.querySelector("#contacts_form")
+
+form.addEventListener("submit",event=>{
+    event.preventDefault()
+    validate();
+})
 
 
 
@@ -49,6 +64,15 @@ BurgerButton.addEventListener("click",()=>{
         backDrop.style.display="none"
         burgerButtonClicks=0;
     }
+    document.addEventListener("click",event=>{
+        let target=event.target;
+        if(target.className==="backdrop"){
+            BurgerButton.classList.toggle("button__menu_close");
+            Burger.style.transform = `translateX(${burgerTranslateValue}px)`;
+            backDrop.style.display="none"
+            burgerButtonClicks=0;
+        }
+    })
 })
 
 

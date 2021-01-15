@@ -150,7 +150,7 @@ button {
   border-bottom: 1px solid #dcdde0;
   position: relative;
   padding: var(--wrapper_padding);
-  /*background: url("../uploads/images/Background.png") no-repeat center;*/
+  overflow: hidden;
   background-size: cover;
   min-height: 100vh; }
   .home_page_wrapper .link__mailto {
@@ -670,10 +670,37 @@ button {
         border: 1px solid #dcdde0;
         padding: 0 16px;
         width: 544px; }
+        .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type input:focus, .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type textarea:focus {
+          border: 1px solid #b1b2b8; }
       .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type input[type="text"] {
         margin-bottom: 16px;
         padding: 0 16px;
         height: 48px; }
+      .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type .wrong {
+        position: relative;
+        display: block; }
+        .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type .wrong::before {
+          font-size: 14px;
+          content: "This field is required.";
+          position: absolute;
+          display: block;
+          bottom: 1px;
+          left: 0;
+          color: #ff555d; }
+        .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type .wrong::after {
+          cursor: text;
+          content: "";
+          display: block;
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          top: 16px;
+          right: 16px;
+          background-image: url("../uploads/images/alert.svg"); }
+        .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type .wrong input {
+          border-color: #ff555d; }
+          .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type .wrong input:focus {
+            border-color: #ff555d; }
       .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-of-type textarea {
         font-family: 'DM Sans', sans-serif;
         padding-top: 12px;

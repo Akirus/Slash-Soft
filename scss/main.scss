@@ -181,7 +181,7 @@ button {
   border-bottom: 1px solid rgba(220, 221, 224, 1);
   position: relative;
   padding: var(--wrapper_padding);
-  /*background: url("../uploads/images/Background.png") no-repeat center;*/
+  overflow: hidden;
   background-size: cover;
   min-height: 100vh;
 
@@ -1007,12 +1007,47 @@ button {
             border: 1px solid rgba(220, 221, 224, 1);
             padding: 0 16px;
             width: 544px;
+            &:focus{
+              border: 1px solid rgba(177, 178, 184, 1);
+            }
           }
 
           input[type="text"] {
             margin-bottom: 16px;
             padding: 0 16px;
             height: 48px;
+          }
+
+          .wrong{
+            position: relative;
+            display: block;
+            &::before{
+              font-size: 14px;
+              content: "This field is required.";
+              position: absolute;
+              display: block;
+              bottom: 1px;
+              left: 0;
+              color:rgba(255, 85, 93, 1);
+            }
+            &::after{
+              cursor:text;
+              content: "";
+              display: block;
+              position: absolute;
+              width: 16px;
+              height: 16px;
+              top:16px;
+              right:16px;
+              background-image: url("../uploads/images/alert.svg");
+            }
+            input {
+              border-color: rgba(255, 85, 93, 1);
+
+              &:focus {
+                border-color: rgba(255, 85, 93, 1);
+              }
+            }
           }
 
           textarea {
