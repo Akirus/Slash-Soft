@@ -9,6 +9,64 @@ body {
 * {
   box-sizing: border-box; }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  transition: 0.3s; }
+
+.button__menu {
+  display: none;
+  z-index: 100;
+  cursor: pointer;
+  align-items: center;
+  position: fixed;
+  top: 65px;
+  right: 65px;
+  width: 28px;
+  height: 16px; }
+  .button__menu::after {
+    transition: 0.3s;
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #272d3d; }
+  .button__menu::before {
+    transition: 0.3s;
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background-color: #272d3d; }
+  .button__menu .dash {
+    transition: 0.3s;
+    opacity: 1;
+    height: 2px;
+    background-color: #272d3d;
+    width: 100%; }
+
+.button__menu_close::after {
+  transform: rotate(-45deg);
+  bottom: 7px; }
+
+.button__menu_close::before {
+  transform: rotate(45deg);
+  top: 7px; }
+
+.button__menu_close .dash {
+  opacity: 0; }
+
 a {
   font-family: 'Inconsolata', sans-serif;
   color: #222222;
@@ -32,12 +90,18 @@ button {
   background-color: #4777fb;
   color: white;
   border: none; }
+  .button__colored:hover {
+    background-color: #416de5; }
 
 .button__transparent {
   font-weight: 600;
   color: #272d3d;
   background-color: transparent;
   border: 1px solid #b1b2b8; }
+  .button__transparent:hover {
+    color: #4777fb;
+    background-color: #ebf0ff;
+    border-color: #4777fb; }
 
 .dot:before {
   display: inline-block;
@@ -71,13 +135,24 @@ button {
   display: flex;
   flex-direction: column; }
 
+.home_page_image_container {
+  display: inline-block;
+  position: relative;
+  height: fit-content;
+  width: fit-content; }
+  .home_page_image_container .home_page_gradient {
+    position: absolute;
+    top: -200px;
+    left: -250px;
+    z-index: -1; }
+
 .home_page_wrapper {
   border-bottom: 1px solid #dcdde0;
   position: relative;
   padding: var(--wrapper_padding);
-  background: url("../uploads/images/Background.png") no-repeat center;
+  /*background: url("../uploads/images/Background.png") no-repeat center;*/
   background-size: cover;
-  min-height: 300px; }
+  min-height: 100vh; }
   .home_page_wrapper .link__mailto {
     position: absolute;
     display: flex;
@@ -108,7 +183,38 @@ button {
       .home_page_wrapper .home_page_nav .home_page_nav_list a:hover {
         color: #272d3d; }
   .home_page_wrapper .home_page_inner {
-    margin: 100px auto 0 auto; }
+    margin: 100px auto 0 auto;
+    position: relative; }
+    .home_page_wrapper .home_page_inner .burger_menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 80px 30px 30px 30px;
+      top: 0;
+      right: 0;
+      position: fixed;
+      z-index: 2;
+      transition: 0.3s;
+      transform: translateX(300px);
+      width: 300px;
+      height: 100vh;
+      background-color: #FFFFFF; }
+      .home_page_wrapper .home_page_inner .burger_menu .home_page_nav {
+        display: block;
+        position: static; }
+      .home_page_wrapper .home_page_inner .burger_menu .contacts_container .link__mailto {
+        display: block;
+        position: static;
+        font-size: 14px; }
+      .home_page_wrapper .home_page_inner .burger_menu .contacts_container .social_container img:first-child {
+        margin-right: 12px; }
+    .home_page_wrapper .home_page_inner img[alt="Slash Soft"] {
+      width: 68px;
+      height: 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none; }
     .home_page_wrapper .home_page_inner .about_us {
       display: inline-block;
       vertical-align: bottom;
@@ -122,6 +228,8 @@ button {
         margin-bottom: 45px; }
       .home_page_wrapper .home_page_inner .about_us .button__colored {
         margin-right: 16px; }
+      .home_page_wrapper .home_page_inner .about_us .button__transparent i {
+        font-size: 15px; }
     .home_page_wrapper .home_page_inner .features {
       margin-top: 120px; }
       .home_page_wrapper .home_page_inner .features .description {
@@ -236,6 +344,14 @@ button {
         border-radius: 50%;
         background-color: transparent;
         border: 1px solid #b1b2b8; }
+        .cases_wrapper .cases_inner .solution_offer button[disabled="disabled"]::after {
+          border-color: #b1b2b8; }
+        .cases_wrapper .cases_inner .solution_offer button[disabled="disabled"]:hover {
+          background-color: transparent;
+          border: 1px solid #b1b2b8; }
+        .cases_wrapper .cases_inner .solution_offer button:hover {
+          background-color: #ebf0ff;
+          border-color: #4777fb; }
       .cases_wrapper .cases_inner .solution_offer .button__back {
         position: relative;
         margin-right: 16px; }
@@ -262,6 +378,8 @@ button {
           transform: rotate(-45deg);
           border-bottom: 1px solid #272d3d;
           border-right: 1px solid #272d3d; }
+      .cases_wrapper .cases_inner .solution_offer button:not([disabled="disabled"]):hover::after {
+        border-color: #4777fb; }
     .cases_wrapper .cases_inner .slider_container {
       transition: 0.3s; }
       .cases_wrapper .cases_inner .slider_container .offer_specification {
@@ -310,6 +428,8 @@ button {
           font-size: 25px; }
         .cases_wrapper .cases_inner .slider_container .offer_discus .button__transparent {
           color: white; }
+          .cases_wrapper .cases_inner .slider_container .offer_discus .button__transparent:hover {
+            color: #416de5; }
 
 .workflow_wrapper {
   min-height: 500px;
@@ -434,6 +554,8 @@ button {
             bottom: -7px;
             left: 0;
             right: 0; }
+        .technology_wrapper .technology_inner .technology_options button:hover {
+          color: #272D3D; }
     .technology_wrapper .technology_inner .technology_slider_container {
       width: 100%;
       transition: 0.3s; }
@@ -524,7 +646,11 @@ button {
       grid-gap: 16px; }
       .contact_us_wrapper .contact_us_inner .contacts_form .subject input {
         display: none; }
+        .contact_us_wrapper .contact_us_inner .contacts_form .subject input:hover + label, .contact_us_wrapper .contact_us_inner .contacts_form .subject input:checked + label {
+          background-color: #ebf0ff;
+          border-color: #4777fb; }
       .contact_us_wrapper .contact_us_inner .contacts_form .subject label {
+        transition: 0.3s;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -574,7 +700,7 @@ button {
   border-bottom: 1px solid #676c7a;
   justify-content: center;
   padding: var(--wrapper_padding);
-  min-height: 150px; }
+  min-height: 100px; }
   .footer_menu_wrapper .footer_menu_inner {
     justify-content: space-between;
     width: 1100px;
@@ -618,6 +744,8 @@ button {
   :root {
     --wrapper_padding: 65px;
     --inner_width: 640px; }
+  .button__menu {
+    display: flex; }
   .home_page_nav {
     display: none; }
   .home_page_wrapper {
@@ -626,10 +754,13 @@ button {
     .home_page_wrapper .link__mailto {
       display: none; }
     .home_page_wrapper .home_page_inner {
+      padding-top: 100px;
       display: flex;
       flex-wrap: wrap-reverse;
       margin: 0;
       width: var(--inner_width); }
+      .home_page_wrapper .home_page_inner img[alt="Slash Soft"] {
+        display: unset; }
       .home_page_wrapper .home_page_inner img {
         margin: 0; }
       .home_page_wrapper .home_page_inner .features {
@@ -745,7 +876,15 @@ button {
 @media (max-width: 767px) {
   :root {
     --inner_width: 311px;
-    --wrapper_padding: 15px; }
+    --wrapper_padding: 30px 15px; }
+  .button__menu {
+    right: 15px;
+    top: 30px; }
+  .home_page_image_container .home_page_gradient {
+    width: 800px;
+    top: -200px;
+    left: -250px;
+    z-index: -1; }
   .description {
     font-size: 14px; }
   .section_title {
@@ -754,6 +893,8 @@ button {
     width: var(--inner_width); }
     .home_page_wrapper .home_page_inner .about_us .description {
       margin-bottom: 32px; }
+  .home_page_wrapper .home_page_inner .burger_menu {
+    width: 211px; }
   .home_page_wrapper .home_page_inner img[alt="Main Screen"] {
     width: 311px;
     height: 255px; }
@@ -901,7 +1042,7 @@ button {
       .faq_wrapper .faq_inner .faq_buttons_container button.button__transparent {
         margin: 0; }
       .faq_wrapper .faq_inner .faq_buttons_container button.button__colored {
-        margin: 0;
+        margin-right: 0;
         margin-bottom: 16px; }
   .contact_us_wrapper .contact_us_inner .contact_us_title_container {
     margin-bottom: 48px;
@@ -945,4 +1086,4 @@ button {
   .footer_info {
     flex-direction: column;
     align-items: start;
-    padding: var(--wrapper_padding); } }
+    padding: 15px; } }

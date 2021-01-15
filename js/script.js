@@ -19,7 +19,7 @@ let solutionTitleValues = ["Food Delivery", "Women's Clothing Webstore", "Furnit
 
 
 const Burger=document.querySelector(".burger_menu");
-const BurgerButton=document.querySelector(".button__menu");
+const BurgerButton=document.querySelector(".button__menu_open");
 const backDrop=document.querySelector(".backdrop");
 let burgerTranslateValue="300";
 let burgerButtonClicks=0;
@@ -40,8 +40,8 @@ if(document.documentElement.clientWidth<700){
 
 
 BurgerButton.addEventListener("click",()=>{
-    BurgerButton.classList.toggle("button__menu_close");
     Burger.style.transform = `translateX(0)`;
+    BurgerButton.classList.toggle("button__menu_close");
     backDrop.style.display="block"
     burgerButtonClicks++;
     if(burgerButtonClicks>1){

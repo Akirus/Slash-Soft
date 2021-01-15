@@ -10,10 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/c983106ad6.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header id="home_page">
     <div class="home_page_wrapper flex_column">
+        <div class="button__menu">
+            <div class="dash">
+            </div>
+        </div>
         <a class="link__mailto" href="mailto:slashsoft@info.com">slashsoft@info.com</a>
         <aside class="home_page_nav">
             <img src="./uploads/images/Logo.svg" alt="Slash Soft">
@@ -29,6 +34,28 @@
             </ul>
         </aside>
         <div class="home_page_inner">
+            <img src="./uploads/images/Logo.svg" alt="Slash Soft">
+            <div class="burger_menu">
+                <div class="home_page_nav">
+                    <ul class="home_page_nav_list flex_column">
+                        <li><a href="">SERVICES</a></li>
+                        <li><a href="">ABOUT US</a></li>
+                        <li><a href="">CASES</a></li>
+                        <li><a href="">WORKFLOW</a></li>
+                        <li><a href="">OUR TEAM</a></li>
+                        <li><a href="">TECHNOLOGY</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <div class="contacts_container">
+                    <a class="link__mailto" href="mailto:slashsoft@info.com">slashsoft@info.com</a>
+                    <div class="social_container">
+                        <a href=""><img src="./uploads/images/in_black.svg" alt=""></a>
+                        <a href=""><img src="./uploads/images/Instagram_black.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
             <div class="about_us">
                 <h2 class="section_caption">
                     What We Offer
@@ -42,9 +69,11 @@
                     a product for your budget.
                 </p>
                 <button class="button__colored">Discuss my project</button>
-                <button class="button__transparent"><span>Explore</span> <img src="./uploads/images/Arrow.svg" alt=""></button>
+                <button class="button__transparent"><span>Explore</span> <i class="fas fa-arrow-down"></i></button>
             </div>
-            <img src="./uploads/images/Main%20Screen.png" height="454" width="553" alt="Main Screen">
+            <div class="home_page_image_container"><img class="home_page_image" src="./uploads/images/Main%20Screen.svg" height="454" width="553" alt="Main Screen">
+                <img class="home_page_gradient" src="./uploads/images/Gradient.svg">
+            </div>
             <div class="features flex">
                 <p class="description">Develop e-commerce software solutions</p>
                 <p class="description">Audit and technical support for existing solutions</p>
@@ -656,22 +685,22 @@
                     <h2 class="form_title"><span class="numbering description">01</span>Pick a subject</h2>
                     <div class="subject flex">
                         <input type="radio" id="consultation" name="subject">
-                        <input type="radio" id="development" name="subject">
-                        <input type="radio" id="audit" name="subject">
-                        <input type="radio" id="qa" name="subject">
                         <label for="consultation">
                             <img src="./uploads/images/consultation.svg" alt="Consultation">
                             <span class="description">
                                 Consultation
                             </span></label>
+                        <input type="radio" id="development" name="subject">
                         <label for="development"><img src="./uploads/images/Development.svg" alt="Development">
                             <span class="description">
                                 Development
                             </span></label>
+                        <input type="radio" id="audit" name="subject">
                         <label for="audit"><img src="./uploads/images/Audit.svg" alt="Audit and support">
                             <span class="description">
                                 Audit and support
                             </span></label>
+                        <input type="radio" id="qa" name="subject">
                         <label for="qa"><img src="./uploads/images/QA.svg" alt="QA">
                             <span class="description">
                                 Manual & automated QA
@@ -692,7 +721,8 @@
                                     class="description">I agree to terms and conditions</span>
                             </label>
                         </div>
-                        <button class="button__colored">Send Message <img src="./uploads/images/Vector.svg" alt=""></button>
+                        <button class="button__colored">Send Message <img src="./uploads/images/Vector.svg" alt="">
+                        </button>
                     </div>
                 </div>
             </form>
@@ -728,6 +758,7 @@
         <a href="" class="description">Privacy Policy</a>
     </div>
 </footer>
-<script src="./script.js"></script>
+<div class="backdrop"></div>
+<script defer src="./script.js"></script>
 </body>
 </html>
