@@ -3,6 +3,9 @@
   --inner_width: 1100px;
 }
 
+a:focus{
+  outline: none;
+}
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -1107,8 +1110,20 @@ button {
               margin-right: 12px;
             }
 
+
             label {
+              position: relative;
               margin-right: 10px;
+              &.wrong{
+                &:before{
+                  content:"You have to agree";
+                  bottom: -16px;
+                  left: -36px;
+                }
+                &::after{
+                  display: none;
+                }
+              }
             }
           }
         }
@@ -1847,7 +1862,7 @@ button {
             }
 
             input {
-              width: 100%;
+              width: 311px;
 
               &[name="Full Name"] {
                 margin-right: 0;

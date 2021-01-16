@@ -2,6 +2,9 @@
   --wrapper_padding: 65px 65px 65px 165px;
   --inner_width: 1100px; }
 
+a:focus {
+  outline: none; }
+
 body {
   font-family: 'DM Sans', sans-serif;
   font-size: 16px; }
@@ -743,7 +746,14 @@ button {
             height: 24px;
             margin-right: 12px; }
           .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:nth-child(2) div label {
+            position: relative;
             margin-right: 10px; }
+            .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:nth-child(2) div label.wrong:before {
+              content: "You have to agree";
+              bottom: -16px;
+              left: -36px; }
+            .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:nth-child(2) div label.wrong::after {
+              display: none; }
 
 #footer_menu {
   background-color: #272d3d; }
@@ -1118,7 +1128,7 @@ button {
     .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-child .form_title {
       width: 100%; }
     .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-child input {
-      width: 100%; }
+      width: 311px; }
       .contact_us_wrapper .contact_us_inner .contacts_form .user_information div:first-child input[name="Full Name"] {
         margin-right: 0; }
   .contact_us_wrapper .contact_us_inner div.flex:last-of-type {
