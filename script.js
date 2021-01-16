@@ -41,6 +41,7 @@ const emailContainer = document.querySelector(".email_container");
 const name = document.querySelector("#name");
 const checkbox=document.querySelector("#agree")
 const nameContainer = document.querySelector(".name_container");
+let timeout=null;
 
 function validate(name, email,checkbox) {
     if (name && email && checkbox) {
@@ -126,6 +127,15 @@ function nameValidate() {
 
 const form = document.querySelector("#contacts_form");
 
+name.addEventListener("input",event=>{
+    clearTimeout(timeout);
+    timeout=setTimeout(nameValidate,500)
+})
+
+address.addEventListener("input",event=>{
+    clearTimeout(timeout);
+    timeout=setTimeout(emailValidate,1000);
+})
 
 form.addEventListener("submit", event => {
     event.preventDefault();
