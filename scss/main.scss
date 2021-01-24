@@ -3,7 +3,7 @@
   --inner_width: 1100px;
 }
 
-a:focus{
+a:focus {
   outline: none;
 }
 
@@ -27,57 +27,62 @@ body {
   transition: 0.3s
 }
 
-.button__menu{
+.button__menu {
   display: none;
   z-index: 100;
   cursor: pointer;
   align-items: center;
   position: fixed;
-  top:65px;
-  right:65px;
+  top: 65px;
+  right: 65px;
   width: 28px;
   height: 16px;
-  &::after{
+
+  &::after {
     transition: 0.3s;
     content: "";
     display: block;
     width: 100%;
     position: absolute;
-    bottom:0;
+    bottom: 0;
     left: 0;
     height: 2px;
-    background-color:rgba(39, 45, 61, 1);
+    background-color: rgba(39, 45, 61, 1);
   }
-  &::before{
+
+  &::before {
     transition: 0.3s;
     content: "";
     display: block;
     width: 100%;
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     height: 2px;
-    background-color:rgba(39, 45, 61, 1);
+    background-color: rgba(39, 45, 61, 1);
   }
-  .dash{
+
+  .dash {
     transition: 0.3s;
     opacity: 1;
     height: 2px;
-    background-color:rgba(39, 45, 61, 1);
+    background-color: rgba(39, 45, 61, 1);
     width: 100%;
   }
 }
 
-.button__menu_close{
-  &::after{
+.button__menu_close {
+  &::after {
     transform: rotate(-45deg);
-    bottom:7px;
+    bottom: 7px;
   }
-  &::before{
+
+  &::before {
     transform: rotate(45deg);
-    top:7px;
+    top: 7px;
   }
-  .dash{
+
+  .dash {
     opacity: 0;
   }
 }
@@ -167,15 +172,16 @@ button {
   flex-direction: column;
 }
 
-.home_page_image_container{
+.home_page_image_container {
   display: inline-block;
   position: relative;
-  height:fit-content;
-  width:fit-content;
-  .home_page_gradient{
-    position:absolute;
-    top:-200px;
-    left:-250px;
+  height: fit-content;
+  width: fit-content;
+
+  .home_page_gradient {
+    position: absolute;
+    top: -200px;
+    left: -250px;
     z-index: -1;
   }
 }
@@ -209,6 +215,7 @@ button {
 
     img {
       margin-bottom: 30px;
+      cursor: pointer;
     }
 
     .home_page_nav_list {
@@ -240,7 +247,7 @@ button {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding:80px 30px 30px 30px;
+      padding: 80px 30px 30px 30px;
       top: 0;
       right: 0;
       position: fixed;
@@ -250,19 +257,22 @@ button {
       width: 300px;
       height: 100vh;
       background-color: #FFFFFF;
-      .home_page_nav{
+
+      .home_page_nav {
         display: block;
         position: static;
       }
-      .contacts_container{
-        .link__mailto{
+
+      .contacts_container {
+        .link__mailto {
           display: block;
           position: static;
           font-size: 14px;
         }
-        .social_container{
-          img{
-            &:first-child{
+
+        .social_container {
+          img {
+            &:first-child {
               margin-right: 12px;
             }
           }
@@ -869,6 +879,54 @@ button {
       width: 100%;
       height: 354px;
 
+      .word_description {
+        position: relative;
+        display: inline-block;
+        line-height: 1.3em;
+        border-bottom: 1px solid rgba(71, 119, 251, 1);
+        background-color: rgba(235, 240, 255, 1);
+
+        &:hover > div {
+          display: block;
+        }
+
+        div {
+          display: none;
+          border-radius: 16px;
+          position: absolute;
+          bottom: -145px;
+          padding: 12px;
+          left: 0;
+          width: 300px;
+          background-color: #FFFFFF;
+          box-shadow: 0px 4px 8px rgba(39, 45, 61, 0.08), 0px 16px 32px rgba(39, 45, 61, 0.08);
+
+          h3 {
+            display:flex;
+            justify-content: space-between;
+            width: 100%;
+            .dot{
+              &::before{
+                background-color:rgba(71, 119, 251, 1);
+              }
+            }
+            button {
+              border: none;
+              background-color: transparent;
+              display: inline-block;
+              padding: 0;
+
+              img {
+                height: 15px;
+              }
+            }
+
+          }
+
+        }
+
+      }
+
       .faq_chat_slider {
         transition: 0.3s;
       }
@@ -1010,7 +1068,8 @@ button {
             border: 1px solid rgba(220, 221, 224, 1);
             padding: 0 16px;
             width: 544px;
-            &:focus{
+
+            &:focus {
               border: 1px solid rgba(177, 178, 184, 1);
             }
           }
@@ -1020,7 +1079,8 @@ button {
             padding: 0 16px;
             height: 48px;
           }
-          .wrong_email{
+
+          .wrong_email {
             position: relative;
             display: block;
 
@@ -1045,6 +1105,7 @@ button {
               right: 16px;
               background-image: url("../uploads/images/alert.svg");
             }
+
             input {
               border-color: rgba(255, 85, 93, 1);
 
@@ -1054,30 +1115,33 @@ button {
             }
           }
 
-          .wrong{
+          .wrong {
             position: relative;
             display: block;
-            &::before{
+
+            &::before {
               font-size: 14px;
               content: "This field is required.";
               position: absolute;
               display: block;
               bottom: 1px;
               left: 0;
-              color:rgba(255, 85, 93, 1);
+              color: rgba(255, 85, 93, 1);
             }
-            &::after{
-              cursor:text;
+
+            &::after {
+              cursor: text;
               content: "";
               display: block;
               position: absolute;
               width: 16px;
               height: 16px;
-              top:16px;
-              right:16px;
+              top: 16px;
+              right: 16px;
               background-image: url("../uploads/images/alert.svg");
 
             }
+
             input {
               border-color: rgba(255, 85, 93, 1);
 
@@ -1114,13 +1178,15 @@ button {
             label {
               position: relative;
               margin-right: 10px;
-              &.wrong{
-                &:before{
-                  content:"You have to agree";
+
+              &.wrong {
+                &:before {
+                  content: "You have to agree";
                   bottom: -16px;
                   left: -36px;
                 }
-                &::after{
+
+                &::after {
                   display: none;
                 }
               }
@@ -1152,6 +1218,7 @@ button {
       margin-right: 15px;
 
       img {
+        cursor: pointer;
         margin-bottom: 8px;
       }
 
@@ -1165,6 +1232,12 @@ button {
         }
 
         img {
+          transition: 0.2s;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+
           width: 24px;
           height: 24px;
         }
@@ -1182,6 +1255,11 @@ button {
         }
 
         a {
+          &:hover {
+            color: rgba(71, 119, 251, 1);
+            font-weight: 500;
+          }
+
           display: flex;
           align-items: center;
           height: 100%;
@@ -1202,6 +1280,10 @@ button {
     align-items: center;
     height: 40px;
 
+    &:hover {
+      color: rgba(71, 119, 251, 1);
+    }
+
     &:not(:first-child) {
       text-decoration: underline;
     }
@@ -1218,7 +1300,7 @@ button {
     --wrapper_padding: 65px;
     --inner_width: 640px;
   }
-  .button__menu{
+  .button__menu {
     display: flex;
   }
   .home_page_nav {
@@ -1479,16 +1561,16 @@ button {
   }
 
 
-  .button__menu{
+  .button__menu {
     right: 15px;
-    top:30px;
+    top: 30px;
   }
 
-  .home_page_image_container{
-    .home_page_gradient{
+  .home_page_image_container {
+    .home_page_gradient {
       width: 800px;
-      top:-200px;
-      left:-250px;
+      top: -200px;
+      left: -250px;
       z-index: -1;
     }
   }
@@ -1511,9 +1593,11 @@ button {
           margin-bottom: 32px;
         }
       }
-      .burger_menu{
+
+      .burger_menu {
         width: 211px;
       }
+
       img[alt="Main Screen"] {
         width: 311px;
         height: 255px;

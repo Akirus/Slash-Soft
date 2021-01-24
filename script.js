@@ -44,11 +44,7 @@ const nameContainer = document.querySelector(".name_container");
 let timeout=null;
 
 function validate(name, email,checkbox) {
-    if (name && email && checkbox) {
-        return true;
-    } else {
-        return false;
-    }
+    return !!(name && email && checkbox);
 }
 
 const label=document.querySelector(".agree_label");
@@ -230,6 +226,9 @@ const technologySection = document.querySelector("#technology");
 const faqSection = document.querySelector("#faq");
 const contactUsSection = document.querySelector("#contact_us");
 const homePageSection=document.querySelector("#home_page");
+const footer=document.querySelector("#footer_menu");
+const homePage=document.querySelector("#home_page");
+
 
 homePageSection.addEventListener("click", event => {
     let target = event.target;
@@ -255,7 +254,9 @@ homePageSection.addEventListener("click", event => {
         faqSection.scrollIntoView({behavior: "smooth"});
     } else if (target.classList.contains("contact_us_link")) {
         contactUsSection.scrollIntoView({behavior: "smooth"});
-    }
+    }else if (target.classList.contains("home_page_link")) {
+    homePage.scrollIntoView({behavior: "smooth"});
+}
 })
 
 casesSection.addEventListener("click",event=>{
@@ -265,6 +266,29 @@ casesSection.addEventListener("click",event=>{
     }
 })
 
+footer.addEventListener("click", event => {
+    event.preventDefault();
+    let target = event.target;
+    if (target.classList.contains("services_link")) {
+        servicesSection.scrollIntoView({behavior: "smooth"});
+    } else if (target.className === "about_us_link") {
+        aboutUsSection.scrollIntoView({behavior: "smooth"});
+    } else if (target.className === "cases_link") {
+        casesSection.scrollIntoView({behavior: "smooth"});
+    } else if (target.className === "workflow_link") {
+        workflowSection.scrollIntoView({behavior: "smooth"});
+    } else if (target.className === "our_team_link") {
+        ourTeamSection.scrollIntoView({behavior: "smooth"});
+    } else if (target.className === "technology_link") {
+        technologySection.scrollIntoView({behavior: "smooth"});
+    } else if (target.className === "faq_link") {
+        faqSection.scrollIntoView({behavior: "smooth"});
+    } else if (target.classList.contains("contact_us_link")) {
+        contactUsSection.scrollIntoView({behavior: "smooth"});
+    }else if (target.classList.contains("home_page_link")) {
+        homePage.scrollIntoView({behavior: "smooth"});
+    }
+})
 
 let chatTranslateValue = "88";
 let buttonQuestionClicks = 0;

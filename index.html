@@ -21,7 +21,7 @@
         </div>
         <a class="link__mailto" href="mailto:slashsoft@info.com">slashsoft@info.com</a>
         <aside class="home_page_nav">
-            <img src="./uploads/images/Logo.svg" alt="Slash Soft">
+            <img class="home_page_link" src="./uploads/images/Logo.svg" alt="Slash Soft">
             <ul class="home_page_nav_list flex_column">
                 <li><a class="services_link" href="">SERVICES</a></li>
                 <li><a class="about_us_link" href="">ABOUT US</a></li>
@@ -69,9 +69,11 @@
                     a product for your budget.
                 </p>
                 <button class="button__colored contact_us_link">Discuss my project</button>
-                <button class="button__transparent services_link"><span class="services_link">Explore</span> <i class="fas fa-arrow-down services_link"></i></button>
+                <button class="button__transparent services_link"><span class="services_link">Explore</span> <i
+                        class="fas fa-arrow-down services_link"></i></button>
             </div>
-            <div class="home_page_image_container"><img class="home_page_image" src="./uploads/images/Main%20Screen.svg" height="454" width="553" alt="Main Screen">
+            <div class="home_page_image_container"><img class="home_page_image" src="./uploads/images/Main%20Screen.svg"
+                                                        height="454" width="553" alt="Main Screen">
                 <img class="home_page_gradient" src="./uploads/images/Gradient.svg">
             </div>
             <div class="features flex">
@@ -632,10 +634,27 @@
                             We provide custom solutions for e-commerce, technologies we use are:
                         </p>
                         <ul>
-                            <li><p class="dot description">Taking a sprint with a bunch of tasks into work, our
-                                employees
-                                implement and test the task,
-                                after which we provide a demo to the customer.</p></li>
+                            <li>
+                                <div class="dot description">Taking a sprint with
+                                    <div class="word_description">a bunch
+                                        <div>
+                                            <h3>
+                                                <span class="dot description">a bunch</span>
+                                                <button><img src="./uploads/images/close.svg" alt=""></button>
+                                            </h3>
+                                            <p class="description">
+                                                Taking a sprint with a bunch of tasks into work, our employees implement
+                                                and test the task,
+                                                after which we provide a demo to the customer.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    of tasks into work, our
+                                    employees
+                                    implement and test the task,
+                                    after which we provide a demo to the customer.
+                                </div>
+                            </li>
                             <li><p class="dot description">The client validates the work and agrees on the next set of
                                 tasks.</p></li>
                             <li><p class="dot description">Close and continuous execution of tasks brings the product as
@@ -684,7 +703,7 @@
                 <div class="subject_container">
                     <h2 class="form_title"><span class="numbering description">01</span>Pick a subject</h2>
                     <div class="subject flex">
-                        <input type="radio" id="consultation" name="subject">
+                        <input type="radio" checked id="consultation" name="subject">
                         <label for="consultation">
                             <img src="./uploads/images/consultation.svg" alt="Consultation">
                             <span class="description">
@@ -710,18 +729,21 @@
                 <div class="user_information">
                     <div>
                         <h2 class="form_title"><span class="numbering description">02</span>Wright more about it</h2>
-                        <div class="name_container"><input type="text" id="name" name="Full Name" placeholder="Full Name"></div>
-                        <div class="email_container"><input type="text" id="email" name="email" placeholder="Email"></div>
+                        <div class="name_container"><input type="text" id="name" name="Full Name"
+                                                           placeholder="Full Name"></div>
+                        <div class="email_container"><input type="text" id="email" name="email" placeholder="Email">
+                        </div>
                         <textarea placeholder="Your Message"></textarea>
                     </div>
                     <div class="flex">
                         <div class="flex">
-                            <input type="checkbox"  id="agree">
+                            <input type="checkbox" id="agree">
                             <label class="agree_label" for="agree"><span
                                     class="description">I agree to terms and conditions</span>
                             </label>
                         </div>
-                        <button type="submit" class="button__colored button__submit">Send Message <img src="./uploads/images/Vector.svg" alt="">
+                        <button type="submit" class="button__colored button__submit">Send Message <img
+                                src="./uploads/images/Vector.svg" alt="">
                         </button>
                     </div>
                 </div>
@@ -733,18 +755,18 @@
     <div class="footer_menu_wrapper flex">
         <div class="footer_menu_inner flex">
             <div class="logo_container">
-                <img src="./uploads/images/Logo%20(2).svg" alt="Slash Soft">
+                <img src="./uploads/images/Logo%20(2).svg" class="home_page_link" alt="Slash Soft">
                 <p class="description">
                     E-commerce software development company
                 </p>
             </div>
             <ul class="footer_nav_list flex">
-                <li><a href="">About Us</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Workflow</a></li>
-                <li><a href="">Our Team</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a class="about_us_link" href="">About Us</a></li>
+                <li><a class="services_link" href="">Services</a></li>
+                <li><a class="workflow_link" href="">Workflow</a></li>
+                <li><a class="our_team_link" href="">Our Team</a></li>
+                <li><a class="faq_link" href="">FAQ</a></li>
+                <li><a class="contact_us_link" href="">Contact Us</a></li>
             </ul>
             <div class="social_container">
                 <a href=""><img src="./uploads/images/in.svg" alt=""></a>

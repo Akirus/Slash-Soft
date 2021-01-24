@@ -172,7 +172,8 @@ button {
     left: 65px;
     width: 100px; }
     .home_page_wrapper .home_page_nav img {
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      cursor: pointer; }
     .home_page_wrapper .home_page_nav .home_page_nav_list li {
       height: 30px; }
     .home_page_wrapper .home_page_nav .home_page_nav_list a {
@@ -582,6 +583,37 @@ button {
       overflow: hidden;
       width: 100%;
       height: 354px; }
+      .faq_wrapper .faq_inner .faq_chat .word_description {
+        position: relative;
+        display: inline-block;
+        line-height: 1.3em;
+        border-bottom: 1px solid #4777fb;
+        background-color: #ebf0ff; }
+        .faq_wrapper .faq_inner .faq_chat .word_description:hover > div {
+          display: block; }
+        .faq_wrapper .faq_inner .faq_chat .word_description div {
+          display: none;
+          border-radius: 16px;
+          position: absolute;
+          bottom: -145px;
+          padding: 12px;
+          left: 0;
+          width: 300px;
+          background-color: #FFFFFF;
+          box-shadow: 0px 4px 8px rgba(39, 45, 61, 0.08), 0px 16px 32px rgba(39, 45, 61, 0.08); }
+          .faq_wrapper .faq_inner .faq_chat .word_description div h3 {
+            display: flex;
+            justify-content: space-between;
+            width: 100%; }
+            .faq_wrapper .faq_inner .faq_chat .word_description div h3 .dot::before {
+              background-color: #4777fb; }
+            .faq_wrapper .faq_inner .faq_chat .word_description div h3 button {
+              border: none;
+              background-color: transparent;
+              display: inline-block;
+              padding: 0; }
+              .faq_wrapper .faq_inner .faq_chat .word_description div h3 button img {
+                height: 15px; }
       .faq_wrapper .faq_inner .faq_chat .faq_chat_slider {
         transition: 0.3s; }
       .faq_wrapper .faq_inner .faq_chat .question {
@@ -771,12 +803,16 @@ button {
       margin-right: 15px;
       width: 150px; }
       .footer_menu_wrapper .footer_menu_inner .logo_container img {
+        cursor: pointer;
         margin-bottom: 8px; }
     .footer_menu_wrapper .footer_menu_inner .social_container a:not(:last-child) {
       margin-right: 12px; }
     .footer_menu_wrapper .footer_menu_inner .social_container a img {
+      transition: 0.2s;
       width: 24px;
       height: 24px; }
+      .footer_menu_wrapper .footer_menu_inner .social_container a img:hover {
+        transform: scale(1.2); }
     .footer_menu_wrapper .footer_menu_inner .footer_nav_list {
       margin-right: 15px; }
       .footer_menu_wrapper .footer_menu_inner .footer_nav_list li {
@@ -788,6 +824,9 @@ button {
           align-items: center;
           height: 100%;
           color: white; }
+          .footer_menu_wrapper .footer_menu_inner .footer_nav_list li a:hover {
+            color: #4777fb;
+            font-weight: 500; }
 
 .footer_info {
   min-height: 70px;
@@ -797,6 +836,8 @@ button {
     display: flex;
     align-items: center;
     height: 40px; }
+    .footer_info a:hover {
+      color: #4777fb; }
     .footer_info a:not(:first-child) {
       text-decoration: underline; }
     .footer_info a:not(:last-child) {
